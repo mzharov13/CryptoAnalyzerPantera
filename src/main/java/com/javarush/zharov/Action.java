@@ -1,5 +1,5 @@
 package com.javarush.zharov;
 
 public interface Action {
-    void run (String[] parameters);
+    void run (String[] project);
 }
