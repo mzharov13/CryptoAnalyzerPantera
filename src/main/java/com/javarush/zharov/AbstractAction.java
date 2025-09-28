@@ -22,7 +22,7 @@ public abstract class AbstractAction implements Action {
                     int index = (int) Constant.charsMap.get(character);
                     index = (index + key + lengthAlphabet) % lengthAlphabet;
                     writer.write(Constant.ALPHABET[index]);
-                } else /*(character == '\n')*/ {
+                } else if (character == '\n') {
                     writer.write(character);
                 }
             }
