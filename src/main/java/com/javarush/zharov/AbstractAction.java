@@ -20,7 +20,7 @@ public abstract class AbstractAction implements Action {
                 char character = (char) indexChar;
                 if (Constant.charsMap.containsKey(character)) {
                     int index = (int) Constant.charsMap.get(character);
-                    index = (index + key + lengthAlphabet) % lengthAlphabet;
+                    index = (index + key + Math.abs(key) * lengthAlphabet) % lengthAlphabet;
                     writer.write(Constant.ALPHABET[index]);
                 } else if (character == '\n') {
                     writer.write(character);
